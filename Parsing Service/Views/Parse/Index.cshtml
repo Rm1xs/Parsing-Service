@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BOL.Models.iPerf3>
+@{
+    ViewData["Title"] = "Parsing";
+}
+
+<h4>Parsing</h4>
+
+<form asp-controller="Parse" asp-action="Index">
+    <p>
+        Search <input type="text" name="SearchString">
+        <input type="submit" value="Find" />
+    </p>
+</form>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Сервер
+            </th>
+            <th>
+                Порт
+            </th>
+            <th>
+                Версия IP
+            </th>
+            <th>
+                Скорость
+            </th>
+            <th>
+                Провайдер
+            </th>
+            <th>
+                Последние обновление
+            </th>
+            <th>
+                Информация взята с:
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Server)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Port)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPVersion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Speed) Гб./ сек.
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hosting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                @Html.RouteLink(item.Site, "Path")
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+
+

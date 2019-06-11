@@ -1,0 +1,54 @@
+C:\Users\Nikita\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.deps.json
+C:\Users\Nikita\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\Nikita\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\Nikita\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Nikita\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csprojAssemblyReference.cache
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfoInputs.cache
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfo.cs
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csproj.CopyComplete
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.dll
+C:\Users\Nikita\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.deps.json
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\User\Desktop\Parsing Service\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfo.cs
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.csproj.CopyComplete
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing Service\BOL\obj\Debug\netstandard2.0\BOL.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.deps.json
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csprojAssemblyReference.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfoInputs.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfo.cs
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csproj.CopyComplete
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.deps.json
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.xml
+C:\Users\User\Desktop\Parsing-Service-master\BOL\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.AssemblyInfo.cs
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.csproj.CopyComplete
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing-Service-master\BOL\obj\Debug\netstandard2.0\BOL.pdb

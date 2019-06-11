@@ -1,0 +1,48 @@
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\ParsingService.deps.json
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\ParsingService.dll
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfo.cs
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\ParsingService.pdb
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\BLL.dll
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\BLL.pdb
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing Service\ParsingService\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CopyComplete
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.dll
+C:\Users\User\Desktop\Parsing Service\ParsingService\obj\Debug\netstandard2.0\ParsingService.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.deps.json
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BLL.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BLL.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csprojAssemblyReference.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CoreCompileInputs.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfoInputs.cache
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfo.cs
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CopyComplete
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.dll
+C:\Users\Nikita\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.pdb
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.deps.json
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.dll
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\ParsingService.pdb
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BLL.dll
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BOL.dll
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BLL.pdb
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\BOL.pdb
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.AssemblyInfo.cs
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.csproj.CopyComplete
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.dll
+C:\Users\User\Desktop\Parsing-Service-master\ParsingService\obj\Debug\netstandard2.0\ParsingService.pdb

@@ -1,0 +1,27 @@
+﻿@model BOL.Models.AutoParsing
+@{
+    ViewBag.Title = "Редактирование смартфона";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>Путь к данным</dt>
+        <dd>
+            @Html.DisplayFor(model => model.ParamServer)
+        </dd>
+
+        <dt>Сайт</dt>
+        <dd>
+            @Html.DisplayFor(model => model.CustomeURL)
+        </dd>
+    </dl>
+
+    <div>
+        <form asp-controller="Home" asp-action="Delete" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>
+

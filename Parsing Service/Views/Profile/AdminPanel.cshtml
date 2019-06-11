@@ -1,0 +1,77 @@
+﻿@model IEnumerable<BOL.Models.AutoParsing>
+@{
+    ViewData["Title"] = "AdminPanel";
+}
+
+<h2>Add site</h2>
+<form method="post" action="~/Parse/GetAtributes">
+    <label>Ссылка на сайт</label><br />
+    <input type="text" name="url" /><br />
+    <label>Путь к калссу таблицы</label><br />
+    <input type="text" name="param" placeholder="//table[class='tableau']" /><br />
+
+    <h4>Порядок записи в таблицу</h4>
+    <label>Сервер</label><br />
+    <input type="text" name="paramserv" placeholder="0" /><br />
+    <label>Ip</label><br />
+    <input type="text" name="paramip" placeholder="7" /><br />
+    <label>Порт</label><br />
+    <input type="text" name="paramport" placeholder="6" /><br />
+    <label>Провайдер</label><br />
+    <input type="text" name="paramhost" placeholder="4" /><br />
+    <input type="submit" value="Parse" style="margin-top:2%" />
+</form>
+
+
+<h2>Last custom parsing</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @foreach (var item in Model)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => item.CustomeURL)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.CustomeURL)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.ParamHosting)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.ParamHosting)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.ParamIp)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.ParamIp)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.ParamServer)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.ParamServer)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.ParamPort)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.ParamPort)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.DateTime)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => item.DateTime)
+            </dd>
+            <dt>
+                <a asp-area="" asp-controller="Home" asp-action="Edit" asp-route-id="@item.AutoId">Edit</a>
+                <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-id="@item.AutoId">Delete</a>
+            </dt>
+        }
+    </dl>
+    <hr />
+
+</div>

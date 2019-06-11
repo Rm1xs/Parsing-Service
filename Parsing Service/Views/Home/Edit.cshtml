@@ -1,0 +1,35 @@
+﻿@model BOL.Models.AutoParsing
+@{
+    ViewBag.Title = "Редактирование смартфона";
+}
+    <form asp-action="Edit" asp-controller="Home" asp-route-id="@Model.AutoId">
+        <div class="form-group">
+            <label asp-for="AutoId" class="control-label">Id</label>
+            <input type="text" asp-for="AutoId" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ParamServer" class="control-label">Путь к данным</label>
+            <input type="text" asp-for="ParamServer" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="CustomeURL" class="control-label">Сайт</label>
+            <input type="text" asp-for="CustomeURL" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ParamIp" class="control-label">IP</label>
+            <input type="number" asp-for="ParamIp" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ParamSpeed" class="control-label">Скорость</label>
+            <input type="number" asp-for="ParamSpeed" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="ParamHosting" class="control-label">Хостинг</label>
+            <input type="number" asp-for="ParamHosting" class="form-control" />
+        </div>
+        <div class="form-group">
+
+            <input type="submit" value="Send" class="btn btn-default" />
+        </div>
+    </form>
+
