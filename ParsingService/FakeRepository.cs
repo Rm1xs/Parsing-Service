@@ -1,7 +1,7 @@
-﻿using BLL.Db;
+﻿using AngleSharp.Html.Parser;
+using BLL.Db;
 using BOL;
 using BOL.Models;
-using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -51,29 +51,59 @@ namespace ParsingService
                 var mode = trash.Replace("Копировать", "");
                 //Add "," to port
                 string port = push.ElementAt(1);
-
+                string result = "";
                 var alldata = db.PerfDb.GetAll();
+                var porttoinbsert = "";
+                int count = 0;
+                int updatelentharr = 1;
+                string[] arr = new string[updatelentharr];
+                int start = 0;
                 if (port.Length > 5)
                 {
-                    var modify = port.Insert(4, ",");
-                    var obj = new iPerf3 { Server = mode, Port = modify, IPVersion = push.ElementAt(4), Speed = covert, Hosting = push.ElementAt(5), DateTime = DateTime.Now, Site = site };
-                    db.PerfDb.Check(obj, mode);
+                    if (port.Contains("...") == true)
+                    {
+                        port = port.Replace("...", ",");
+                        var len = port.Length;
+                        port = port.Insert(4, ",");
+                        len = port.Length;
+                        for (int i = 0; i < port.Length; i++)
+                        {
+                            porttoinbsert = port;
+                            if (porttoinbsert[i].ToString() == ",")
+                            {
+                                string text = porttoinbsert.Substring(start, i);
+                                result = text;
+                                arr[count] = result;
+                                updatelentharr += 1;
+                                start = i + 1;
+                            }
+                        }
+                        var obj = new iPerf3 { Server = mode, Port = arr, IPVersion = push.ElementAt(4), Speed = covert, Hosting = push.ElementAt(5), DateTime = DateTime.Now, Site = site };
+                        db.PerfDb.Check(obj, mode);
+                    }
                 }
                 else
                 {
-                    var obj = new iPerf3 { Server = mode, Port = push.ElementAt(1), IPVersion = push.ElementAt(4), Speed = covert, Hosting = push.ElementAt(5), DateTime = DateTime.Now, Site = site };
+                    int count2 = 0;
+                    result = port;
+                    arr[count] = result;
+                    var obj = new iPerf3 { Server = mode, Port = arr, IPVersion = push.ElementAt(4), Speed = covert, Hosting = push.ElementAt(5), DateTime = DateTime.Now, Site = site };
                     db.PerfDb.Check(obj, mode);
+                    count2++;
                 }
             }
         }
 
         internal void AutoParsTable(string url, string param, int paramserv, int paramip, int paramport, int paramhost)
         {
-            var obj = new AutoParsing { CustomeURL = url, ParamServer = param, ParamServerId = paramserv,  ParamHosting = paramhost, ParamIp = paramip, ParamPort = paramport, DateTime = DateTime.Now };
+            var obj = new AutoParsing { CustomeURL = url, ParamServer = param, ParamServerId = paramserv, ParamHosting = paramhost, ParamIp = paramip, ParamPort = paramport, DateTime = DateTime.Now };
             db.AutoParsingDb.Insert(obj);
-
+            string result = "";
             var getdata = db.AutoParsingDb.GetAll();
-            foreach(var check in getdata)
+            int updatelentharr = 1;
+            int count = 0;
+            string[] arr = new string[updatelentharr];
+            foreach (var check in getdata)
             {
                 WebClient webClient = new WebClient();
                 string page = webClient.DownloadString(check.CustomeURL);
@@ -86,38 +116,110 @@ namespace ParsingService
                             .Where(tr => tr.Elements("td").Count() > 1)
                             .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
                             .ToList();
-                foreach(var go in table)
+                foreach (var go in table)
                 {
-                    var send = new iPerf3 { Server = go.ElementAt(paramserv), Port = go.ElementAt(paramport), IPVersion = go.ElementAt(paramip), Hosting = go.ElementAt(paramhost), DateTime = DateTime.Now, Site = url };
+                    result = go.ElementAt(paramport);
+                    arr[count] = result;
+                    count++;
+                    updatelentharr++;
+                    var send = new iPerf3 { Server = go.ElementAt(paramserv), Port = arr, IPVersion = go.ElementAt(paramip), Hosting = go.ElementAt(paramhost), DateTime = DateTime.Now, Site = url };
                     db.PerfDb.Check(send, go.ElementAt(0));
                 }
-            }           
+            }
         }
-        //internal void AutoParsEdit(string url, string param, int paramserv, int paramip, int paramport, int paramhost)
-        //{
-        //    var obj = new AutoParsing { CustomeURL = url, ParamServer = param, ParamHosting = paramhost, ParamIp = paramip, ParamPort = paramport, DateTime = DateTime.Now };
-        //    db.AutoParsingDb.Insert(obj);
+        internal void AutoParseLine(string url, string path)
+        {
+            WebClient webClient = new WebClient();
+            string page = webClient.DownloadString(url);
+            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+            doc.LoadHtml(page);
+            var tdNodes = doc.DocumentNode.SelectNodes(path);
+            var obj2 = new AutoParsing { CustomeURL = url, ParamServer = path, DateTime = DateTime.Now };
+            db.AutoParsingDb.Insert(obj2);
+            int speed = 0;
+            int updatelentharr = 1;
+            int count = 0;
+            string[] arr = new string[updatelentharr];
+            for (int i = 0; i < tdNodes.Count; i++)
+            {
+                string format2result = "";
+                string format3result = "";
+                string checkformat = "";          
+                //server
+                string format = tdNodes[i].InnerText;
+                format = format.Replace("iperf3", "");
+                format = format.Replace("-c", "");
+                format = format.Replace("-R", "");
+                format = format.Replace("-P", "");
+                format = format.Replace("-p", "");
+                format = format.Replace("-r", "");
+                format = format.Replace("-V", "");
+                format = format.Replace("(for IPv4)", "");
+                format = format.Replace("(for IPv6)", "");
+                format = format.Replace("IPv4", "");
+                format = format.Replace("IPv6", "");
+                format = format.Replace("4", "");
+                format = format.Replace("6", "");
+                format = format.Replace("-4", "");
+                format = format.Replace("-6", "");
+                format = format.Replace("5002", "");
+                format = format.Replace("-10", "");
+                format = format.Replace("10", "");
+                format = format.Replace("wget", "");
+                format = format.Replace("-O", "");
+                format = format.Replace("(für IPv4)", "");
+                format = format.Replace("$", "");
+                //ip
+                string format2 = tdNodes[i].InnerText;
+                if (format2.Contains("IPv4") == true)
+                {
+                    format2result = "IPv4";
+                    format.Replace("IPv4", "");
+                }
+                else
+                {
+                    format2result = "IPv6";
+                    format.Replace("IPv6", "");
+                }
+                //port
+                List<string> ports = new List<string>();
+                string result = "";
+                ports.Add("5002");
+                ports.Add("4");
+                ports.Add("6");
+                ports.Add("10");
+                ports.Add("5200");
+                ports.Add("5209");
+                ports.Add("5202");
+                ports.Add("5201");
+                ports.Add("5203");
+                string format3 = tdNodes[i].InnerText;
+                foreach (var checkport in ports)
+                {
+                    if (format3.Contains(checkport) == true)
+                    {
+                        result = checkport;
+                        arr[count] = result;
+                        updatelentharr++;
+                        checkformat = format.Replace(checkport, "");
+                        checkformat = format.Replace("-" + checkport, "");
+                        format = format.Trim();
+                    }
+                }
+                string format4result = "unknown";
+                if(url == "http://iperf.volia.net/")
+                {
+                    format4result = "Volia";
+                }
+                    
+                if (url == "http://iperf.volia.net/")
+                {
+                    speed = 1;
+                }
 
-        //    var getdata = db.AutoParsingDb.GetAll();
-        //    foreach (var check in getdata)
-        //    {
-        //        WebClient webClient = new WebClient();
-        //        string page = webClient.DownloadString(check.CustomeURL);
-
-        //        HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-        //        doc.LoadHtml(page);
-        //        List<List<string>> table = doc.DocumentNode.SelectSingleNode(check.ParamServer)
-        //            .Descendants("tr")
-        //                    .Skip(1)
-        //                    .Where(tr => tr.Elements("td").Count() > 1)
-        //                    .Select(tr => tr.Elements("td").Select(td => td.InnerText.Trim()).ToList())
-        //                    .ToList();
-        //        foreach (var go in table)
-        //        {
-        //            var send = new iPerf3 { Server = go.ElementAt(check.ParamServerId), Port = go.ElementAt(check.ParamPort), IPVersion = go.ElementAt(check.ParamIp), Hosting = go.ElementAt(check.ParamHosting), DateTime = DateTime.Now, Site = url };
-        //            db.AutoParsingDb.Check(send, check.AutoId);
-        //        }
-        //    }
-        //}
+                var obj = new iPerf3 { Server = checkformat, IPVersion = format2result, Port = arr, Site = url, Hosting = format4result, Speed = speed, DateTime = DateTime.Now };
+                db.PerfDb.Insert(obj);
+            }
+        }
     }
 }

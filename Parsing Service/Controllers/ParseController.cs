@@ -6,7 +6,6 @@ using BOL;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using OfficeOpenXml;
 using ParsingService;
 
 namespace Parsing_Service.Controllers
@@ -20,9 +19,9 @@ namespace Parsing_Service.Controllers
             helper = new ParseHelper(context);
         }
         public IActionResult Index(string searchString)
-        {            
+        {
             var data = from m in db.PerfDb.GetAll()
-                       select m;           
+                       select m;
             if (!String.IsNullOrEmpty(searchString))
             {
                 data = data.Where(s => s.Server.Contains(searchString));
@@ -39,7 +38,19 @@ namespace Parsing_Service.Controllers
         public string GetAtributes(string url, string param, int paramserv, int paramip, int paramport, int paramhost)
         {
             helper.AutoPars(url, param, paramserv, paramip, paramport, paramhost);
-            return "Secsess";
+            return "Sucsess";
+        }
+        [HttpPost]
+        public IActionResult GetAutoAributes(string url, string path)
+        {
+            helper.AutoParsingLine(url, path);
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            db.PerfDb.Delete(id);
+            return RedirectToAction("Index");
         }
     }
 }

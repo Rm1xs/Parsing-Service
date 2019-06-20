@@ -3,75 +3,164 @@
     ViewData["Title"] = "AdminPanel";
 }
 
-<h2>Add site</h2>
-<form method="post" action="~/Parse/GetAtributes">
-    <label>Ссылка на сайт</label><br />
-    <input type="text" name="url" /><br />
-    <label>Путь к калссу таблицы</label><br />
-    <input type="text" name="param" placeholder="//table[class='tableau']" /><br />
+<h2>Добавить сайт</h2>
 
-    <h4>Порядок записи в таблицу</h4>
-    <label>Сервер</label><br />
-    <input type="text" name="paramserv" placeholder="0" /><br />
-    <label>Ip</label><br />
-    <input type="text" name="paramip" placeholder="7" /><br />
-    <label>Порт</label><br />
-    <input type="text" name="paramport" placeholder="6" /><br />
-    <label>Провайдер</label><br />
-    <input type="text" name="paramhost" placeholder="4" /><br />
-    <input type="submit" value="Parse" style="margin-top:2%" />
-</form>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+    Обычный сайт
+</button>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+    Сайт с таблицами
+</button>
 
 
-<h2>Last custom parsing</h2>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Обычный сайт</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Parse/GetAutoAributes">
+                <div class="modal-body">
+                    <label>Ссылка на сайт</label><br />
+                    <input type="text" name="url" /><br />
+                    <label>XPath</label><br />
+                    <input type="text" name="path" placeholder="//h2"><br />
+
+                    <div id=divadd>
+                    </div>
+                    <input type="button" onclick=plus() value="+">
+
+                    <script>
+                        function plus() {
+                            document.getElementById('divadd').innerHTML +='<br><label>XPath</label>' + '<br><input type=text name=val2>'
+                        }
+                    </script>
+
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Parse" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Сайт с таблицами</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post" action="~/Parse/GetAtributes">
+                <div class="modal-body">
+                    <label>Ссылка на сайт</label><br />
+                    <input type="text" name="url" /><br />
+                    <label>Путь к калссу таблицы</label><br />
+                    <input type="text" name="param" placeholder="//table[class='tableau']" /><br />
+
+                    <h4>Порядок записи в таблицу</h4>
+                    <label>Сервер</label><br />
+                    <input type="text" name="paramserv" placeholder="0" /><br />
+                    <label>Ip</label><br />
+                    <input type="text" name="paramip" placeholder="7" /><br />
+                    <label>Порт</label><br />
+                    <input type="text" name="paramport" placeholder="6" /><br />
+                    <label>Провайдер</label><br />
+                    <input type="text" name="paramhost" placeholder="4" /><br />
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" value="Parse" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<h2>Последние добавления</h2>
 
 <div>
     <hr />
     <dl class="dl-horizontal">
         @foreach (var item in Model)
         {
-            <dt>
-                @Html.DisplayNameFor(model => item.CustomeURL)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.CustomeURL)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.ParamHosting)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.ParamHosting)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.ParamIp)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.ParamIp)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.ParamServer)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.ParamServer)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.ParamPort)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.ParamPort)
-            </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.DateTime)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => item.DateTime)
-            </dd>
-            <dt>
-                <a asp-area="" asp-controller="Home" asp-action="Edit" asp-route-id="@item.AutoId">Edit</a>
-                <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-id="@item.AutoId">Delete</a>
-            </dt>
+            if (item.ParamIp != 0)
+            {
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => item.CustomeURL)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.CustomeURL)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.ParamHosting)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ParamHosting)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.ParamIp)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ParamIp)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.ParamServer)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ParamServer)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.ParamPort)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ParamPort)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.DateTime)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.DateTime)
+                </dd>
+                <dt>
+                    <a asp-area="" asp-controller="Home" asp-action="Edit" asp-route-id="@item.AutoId">Edit</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Delete" asp-route-id="@item.AutoId">Delete</a>
+                </dt>
+            }
+            else
+            {
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => item.CustomeURL)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.CustomeURL)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.ParamServer)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.ParamServer)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => item.DateTime)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => item.DateTime)
+                </dd>
+            }
         }
     </dl>
     <hr />
-
+    <a asp-area="" asp-controller="EFUpdate" asp-action="Update" style="color:red">Update DataBase</a>
+    |
+    <a asp-area="" asp-controller="Home" asp-action="CheckError" style="color:red">Check errors</a>
 </div>

@@ -22,6 +22,10 @@ namespace BOL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<iPerf3>()
+            .Property(e => e.Port)
+            .HasConversion(v => string.Join(",", v),
+                v => v.Split(','));
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 using BLL.Db;
 using BOL;
 using BOL.Models;
@@ -25,6 +25,7 @@ namespace Parsing_Service.Controllers
             {
                 db.RoleDb.FillRoles();
                 db.UserDb.InsertAdmin();
+                helper.StartParsingHtml();
             }
         }
 
@@ -57,13 +58,32 @@ namespace Parsing_Service.Controllers
                 return View();
             }
         }
+
+
+        public string CheckError()
+        {
+            int count = 0;
+            var check = db.PerfDb.GetAll();
+            foreach (var a in check)
+            {
+                if (a.Server == null)
+                {
+                    db.PerfDb.Delete(a.PerfId);
+                    count++;
+                }
+            }
+            return count + " - " + "errors found";
+        }
+
         public IActionResult Edit(int id)
         {
             if (id != null)
             {
                 var data = db.AutoParsingDb.GetById(id);
                 if (data != null)
-                    return View(data);             
+                {
+                    return View(data);
+                }
             }
             return NotFound();
         }
@@ -95,7 +115,9 @@ namespace Parsing_Service.Controllers
             {
                 AutoParsing parsing = db.AutoParsingDb.GetById(id);
                 if (parsing != null)
+                {
                     return View(parsing);
+                }
             }
             return NotFound();
         }
@@ -104,10 +126,10 @@ namespace Parsing_Service.Controllers
         public IActionResult Delete(int id)
         {
             var data = db.PerfDb.GetAll();
-            AutoParsing parsing = db.AutoParsingDb.GetById(id);    
-            foreach(var a in data)
+            AutoParsing parsing = db.AutoParsingDb.GetById(id);
+            foreach (var a in data)
             {
-                if(a.Site == parsing.CustomeURL)
+                if (a.Site == parsing.CustomeURL)
                 {
                     db.PerfDb.Delete(a.PerfId);
                 }

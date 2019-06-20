@@ -18,7 +18,7 @@
     <thead>
         <tr>
             <th>
-               Сервер
+                Сервер
             </th>
             <th>
                 Порт
@@ -43,29 +43,43 @@
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Server)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Port)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IPVersion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Speed) Гб./ сек.
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hosting)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTime)
-            </td>
-            <td>
-                @Html.RouteLink(item.Site, "Path")
-            </td>
-        </tr>
+            if (item.Server != null)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Server)
+                    </td>
+                    <td>
+                        @if (item.Port.Length <= 1)
+                        {
+                            @Html.DisplayFor(modelItem => item.Port)
+                        }
+                        else
+                        {
+                            foreach (var b in item.Port)
+                            {
+                                @Html.DisplayFor(modelItem => b)
+                                <br />
+                            }
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IPVersion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Speed)<p>Гб./ сек.</p>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hosting)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateTime)
+                    </td>
+                    <td>
+                        @Html.RouteLink(item.Site, "Path")
+                    </td>
+                </tr>
+            }
         }
     </tbody>
 </table>

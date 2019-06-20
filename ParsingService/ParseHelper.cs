@@ -18,15 +18,14 @@ namespace ParsingService
         public void StartParsingHtml()
         {
             rep.GetHtml("https://iperf.cc/ru/");
-            //rep.GetHtml2("https://iperf.fr/iperf-servers.php");
+        }
+        public void AutoParsingLine(string url, string path)
+        {
+            rep.AutoParseLine(url, path);
         }
         public void AutoPars(string url, string param, int paramserv, int paramip, int paramport, int paramhost)
         {
             rep.AutoParsTable(url, param, paramserv, paramip, paramport, paramhost);
         }
-        //public void Edit(string url, string param, int paramserv, int paramip, int paramport, int paramhost)
-        //{
-        //    rep.AutoParsEdit(url, param, paramserv, paramip, paramport, paramhost);
-        //}
     }
 }

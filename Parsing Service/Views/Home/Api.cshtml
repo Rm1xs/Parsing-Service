@@ -10,9 +10,17 @@
 
         <li class="list-group-item" style="background-color:lightgreen">
             <p style="font-weight:bold">GET :</p> /api/Data
-            <a asp-area="" asp-controller="Data" asp-action="Get" class="navbar-brand" style="position:absolute;margin-top:-1.5%">Try</a>
+            <form method="get" action="~/api/Data/GetAll">
+                <input type="submit" value="Try" />
+            </form>
         </li>
-
+        <hr />
+        <li class="list-group-item" style="background-color:lightgreen">
+            <p style="font-weight:bold">GET :</p> /api/Data/{ServerName}
+            <form method="get" action="~/api/Data/GetById/ping6.online.net">
+                <input type="submit" value="Try" />
+            </form>
+        </li>
     </ul>
     
 </div>

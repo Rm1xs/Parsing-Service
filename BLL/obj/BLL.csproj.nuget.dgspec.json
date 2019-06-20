@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BLL\\BLL.csproj": {}
+    "D:\\NURE\\Parsing-Service\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BLL\\BLL.csproj": {
+    "D:\\NURE\\Parsing-Service\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BLL\\BLL.csproj",
+        "projectUniqueName": "D:\\NURE\\Parsing-Service\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BLL\\obj\\",
+        "projectPath": "D:\\NURE\\Parsing-Service\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\NURE\\Parsing-Service\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -30,8 +32,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\DAL.csproj": {
-                "projectPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\DAL.csproj"
+              "D:\\NURE\\Parsing-Service\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\NURE\\Parsing-Service\\DAL\\DAL.csproj"
               }
             }
           }
@@ -45,6 +47,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -60,21 +66,23 @@
         }
       }
     },
-    "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\BOL.csproj": {
+    "D:\\NURE\\Parsing-Service\\BOL\\BOL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\BOL.csproj",
+        "projectUniqueName": "D:\\NURE\\Parsing-Service\\BOL\\BOL.csproj",
         "projectName": "BOL",
-        "projectPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\BOL.csproj",
-        "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\obj\\",
+        "projectPath": "D:\\NURE\\Parsing-Service\\BOL\\BOL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\NURE\\Parsing-Service\\BOL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -97,11 +105,23 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.5.0, )"
             }
           },
           "imports": [
@@ -112,21 +132,23 @@
         }
       }
     },
-    "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\DAL.csproj": {
+    "D:\\NURE\\Parsing-Service\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\NURE\\Parsing-Service\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\DAL\\obj\\",
+        "projectPath": "D:\\NURE\\Parsing-Service\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\NURE\\Parsing-Service\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -138,8 +160,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\BOL.csproj": {
-                "projectPath": "C:\\Users\\Nikita\\Desktop\\Parsing-Service-master\\BOL\\BOL.csproj"
+              "D:\\NURE\\Parsing-Service\\BOL\\BOL.csproj": {
+                "projectPath": "D:\\NURE\\Parsing-Service\\BOL\\BOL.csproj"
               }
             }
           }

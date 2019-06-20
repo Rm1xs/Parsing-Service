@@ -16,6 +16,6 @@ namespace BOL.Models
         public int ParamSpeed { get; set; }
         public int ParamHosting { get; set; }
         public int ParamPort { get; set; }
-        public DateTime DateTime { get; set; }
+        public DateTime DateTime { get; set; }        
     }
 }

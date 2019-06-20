@@ -20,10 +20,23 @@ namespace Parsing_Service.Controllers
             helper = new ParseHelper(context);
         }
 
-        [HttpGet]
-        public IEnumerable<iPerf3> Get()
+        [HttpGet("GetAll")]
+        public IEnumerable<iPerf3> GetAll()
         {
             return db.PerfDb.GetAll();
+        }
+        [HttpGet("GetById/{servername}")]
+        public IActionResult GetById(string servername)
+        {
+            var check = db.PerfDb.GetAll();
+            foreach (var a in check)
+            {
+                if (a.Server == servername)
+                {
+                    return Ok(a);
+                }
+            }
+            return Ok();
         }
     }
 }
